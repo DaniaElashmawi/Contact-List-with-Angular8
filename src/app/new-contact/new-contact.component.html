@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<form #formData = "ngForm"  class=" mt-3  pb-3 container px-5 py-2">
+  <h3>Add a New Contact</h3>
+  <div class="form-group">
+<input type="text" name="contFirstName" ngModel placeholder="First name" aria-label="FirstName">
+<input type="text" name="contLastName" ngModel placeholder="Last name" aria-label="LastName">
+<input max="999" min="1" name="contKey" ngModel placeholder="+44" type="number" aria-label="Phone" >
+<input type="tel" size="7" name="contPhone" ngModel placeholder="567 2249" aria-label="ConturyKey">
+  </div>
+  <p class="text-center mt-5"><input (click) = "onSubmit(formData.value)" type="button" name="submit-new-cont" [routerLink] ="''"
+    value="Add Contact"><br>
+  <input type="reset" name="cancel-new-cont" value="Cancel" [routerLink] ="''"></p>
+
+</form>
+

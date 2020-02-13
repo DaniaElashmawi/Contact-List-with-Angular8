@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<section id="contacts">
+  <div class="cont-box container pb-3 ">
+
+ <div class="cont-search mt-3"><img src="../../assets/images/magnify glass.png">
+   <input #gosearch type="search" name="cont-search" placeholder="Search Contacts"
+[(ngModel)] = "searchValue" class="text-center" aria-label="Search">
+ </div>
+
+ <div class="cont-details">
+   <p class="d-flex justify-content-between align-items-baseline  add-new-cont">
+     Add New Contacts<button type="button" [routerLink]="'/newContact'" >
+      <i class="fas fa-plus fa-2x"></i></button>
+    </p>
+
+<div >
+  <div [ngStyle] = "{'display':!index ?'none':'block' }" id="latest-cont">
+    <p>Latest Contacts</p>
+<div class="single-latest-cont pl-5" *ngFor= "let recentContacts of contacts | slice:0:2;">
+ {{recentContacts.name}}<br>{{recentContacts.phone}}
+</div>
+</div><!--latest-cont/end -->
+
+  <div class="cont-all">
+    <div #L *ngFor= "let letterSec of letters" >
+   <p [ngStyle] = "{'display':!index ?'none':'block' }" class=" theLetters mb-2">{{letterSec}}</p>
+    <ng-container *ngFor= "let contact of contacts | filter:searchValue ">
+      <div class="single-cont-all pl-5" *ngIf= "checkLetter(letterSec,contact)">
+        {{contact.name}}<br>{{contact.phone}}
+      </div>
+    </ng-container>
+    </div>
+    </div><!-- cont-all/end-->
+  </div>
+
+ </div><!-- cont-details/end-->
+
+</div> <!-- cont-box/end-->
+
+</section><!-- contacts/end-->
+
+<div id="side-search">
+  <div *ngFor= "let letter of letters" >
+   <button class="btn p-0" (click)="jumpToLetter(letter , L)"><p>{{letter}}</p></button>
+    </div>
+</div>

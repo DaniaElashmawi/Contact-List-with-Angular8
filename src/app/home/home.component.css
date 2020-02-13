@@ -1,0 +1,94 @@
+*
+{
+box-sizing: border-box;
+}
+
+.cont-box
+{
+  border: .5px dashed #bbbbbb;
+}
+.cont-search
+{
+  padding: 10px 20px;
+  background-color: #bbbbbb;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+}
+.cont-search img
+{
+    top: 38px;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    z-index: 9999999;
+    left: 43%;
+}
+
+.cont-search input
+{
+  position: relative;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #DDD;
+  width: 100%;
+  font-size: 15px;
+  margin: 0 auto;
+  max-height: 2em;
+  outline: none;
+  text-align: center;
+}
+
+.add-new-cont
+{
+  color: gray;
+    font-weight: 800;
+    padding:10px 15px;
+    margin: 0;
+    background-color:  #e8e8e8;
+border-bottom:.5px solid  #bbbbbb ;
+}
+
+.add-new-cont button
+{
+  border: none;
+    background-color: transparent;
+}
+.add-new-cont i
+{
+  color: gray;
+}
+#latest-cont p , .cont-all p
+{
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 15px;
+  background-color: #e8e8e8;
+  margin-bottom: 0;
+}
+
+.single-latest-cont , .single-cont-all
+{
+border-bottom: .5px solid #bbbbbb;
+}
+.cont-all-with-search
+{
+  display: none;
+}
+#side-search
+{
+  position: fixed;
+  top: 28%;
+  display: inline-block;
+  right: 10%;
+}
+#side-search p
+{
+  color: gray;
+  font-weight: 700;
+  margin: 0;
+  font-size: 12px;
+}
+#side-search div {
+  height: 16px;
+}
